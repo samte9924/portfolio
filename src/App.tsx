@@ -1,6 +1,13 @@
-import { Github, Linkedin } from "lucide-react";
 import NavBar from "./components/NavBar";
 import "./styles/App.css";
+import Html from "./components/icons/Html";
+import Css from "./components/icons/Css";
+import JavaScript from "./components/icons/JavaScript";
+import React from "./components/icons/React";
+import MySql from "./components/icons/MySql";
+import Node from "./components/icons/Node";
+import LinkedIn from "./components/icons/LinkedIn";
+import GitHub from "./components/icons/GitHub";
 
 function App() {
   /*const selectedTheme = localStorage.getItem("theme");
@@ -17,19 +24,20 @@ function App() {
         </h1>
         <div className="my-contacts">
           <a href="https://github.com/samte9924">
-            <Github />
+            <GitHub />
           </a>
           <a href="https://linkedin.com/in/samuel-tedaldi-44ab44329">
-            <Linkedin />
+            <LinkedIn />
           </a>
         </div>
       </header>
       <div className="my-stack">
-        <div>HTML5</div>
-        <div>CSS3</div>
-        <div>JS</div>
-        <div>React</div>
-        <div>Node</div>
+        <Html />
+        <Css />
+        <JavaScript />
+        <React />
+        <Node />
+        <MySql />
       </div>
       <div className="my-projects">
         <div>
