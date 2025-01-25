@@ -1,4 +1,4 @@
-import { Languages, Sun } from "lucide-react";
+import { Languages } from "lucide-react";
 import ThemeSelector from "./ThemeSelector";
 
 function NavBar() {
