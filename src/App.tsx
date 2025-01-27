@@ -8,6 +8,7 @@ import MySql from "./components/icons/MySql";
 import Node from "./components/icons/Node";
 import LinkedIn from "./components/icons/LinkedIn";
 import GitHub from "./components/icons/GitHub";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   /*const selectedTheme = localStorage.getItem("theme");
@@ -32,33 +33,34 @@ function App() {
         </div>
       </header>
       <div className="my-stack">
-        <Html />
-        <Css />
-        <JavaScript />
-        <React />
-        <Node />
-        <MySql />
+        <div className="row">
+          <Html />
+          <Css />
+          <JavaScript />
+          <React />
+        </div>
+        <div className="row">
+          <Node />
+          <MySql />
+        </div>
       </div>
       <div className="my-projects">
-        <div>
-          <h3>cnvrtr.io</h3>
-          <p>
-            <a href="https://cnvrtr-io.vercel.app/" target="_blank">
-              Live Preview
-            </a>
-          </p>
-          <p>
-            <a href="https://github.com/samte9924/cnvrtr" target="_blank">
-              Source Code
-            </a>
-          </p>
-        </div>
-        <div>
-          <h3>Youtube video downloader</h3>
-        </div>
-        <div>
-          <h3>AI Content Generator</h3>
-        </div>
+        <ProjectCard
+          name="cnvrtr.io"
+          stack={["React", "NextJS", "Tailwind"]}
+          previewLink="https://cnvrtr-io.vercel.app/"
+          sourceLink="https://github.com/samte9924/cnvrtr"
+        />
+        <ProjectCard
+          name="Youtube video downloader"
+          stack={["Python"]}
+          sourceLink="https://github.com/samte9924/yt-video-downloader"
+        />
+        <ProjectCard
+          name="AI Content Generator"
+          stack={["React", "NextJS", "Tailwind"]}
+          sourceLink="https://github.com/samte9924/ai-content-generator"
+        />
       </div>
       <div className="contact-me">
         <h1>Contact Me!</h1>
