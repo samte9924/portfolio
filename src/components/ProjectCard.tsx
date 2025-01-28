@@ -8,7 +8,7 @@ function ProjectCard({
   screenShotUrl,
 }: ProjectCardProps) {
   return (
-    <div>
+    <div className="project-card">
       <div>
         <h3>{name}</h3>
         <p>{`${stack.join(` • `)}`}</p>
