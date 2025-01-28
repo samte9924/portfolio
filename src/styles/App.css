@@ -57,19 +57,45 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 1rem 3rem;
+  padding: 0 3rem;
 }
 
-.my-stack .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 2rem;
-  max-width: 18rem;
+.marquee {
+  width: clamp(calc(50px * var(--total)), 30%, 1530px);
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
-.my-stack .icon svg {
+.marquee .item {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: max(calc(50px * var(--total)), 100%);
+  /* the biggest value inside max() will be applied as left offset */
+  animation: scrollLeft var(--duration) linear infinite;
+  animation-delay: calc(
+    var(--duration) / var(--total) * (var(--total) - var(--position)) * -1
+  );
+  /* -1 gives a negative delay, allowing the items to start already mid-animation */
+}
+
+@keyframes scrollLeft {
+  /* from {} is already defined by the starting point of the items */
+  to {
+    left: -50px; /* item length */
+  }
+  /* the animation ends when the items go outside of the wrapper */
+}
+
+.marquee .icon svg {
   width: 2.5rem;
   height: 2.5rem;
 }
@@ -79,14 +105,14 @@ footer {
   flex-direction: column;
   max-width: 60rem;
   gap: 2rem;
-  padding: 3rem 1rem;
+  padding: 3rem;
 }
 
 .project-card {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 2rem;
+  padding: 1rem 0;
 }
 .project-card::after {
   content: "";

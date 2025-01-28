@@ -1,14 +1,9 @@
 import NavBar from "./components/NavBar";
 import "./styles/App.css";
-import Html from "./components/icons/Html";
-import Css from "./components/icons/Css";
-import JavaScript from "./components/icons/JavaScript";
-import React from "./components/icons/React";
-import MySql from "./components/icons/MySql";
-import Node from "./components/icons/Node";
 import LinkedIn from "./components/icons/LinkedIn";
 import GitHub from "./components/icons/GitHub";
 import ProjectCard from "./components/ProjectCard";
+import Marquee from "./components/Marquee";
 
 function App() {
   /*const selectedTheme = localStorage.getItem("theme");
@@ -33,16 +28,7 @@ function App() {
         </div>
       </header>
       <div className="my-stack">
-        <div className="row">
-          <Html />
-          <Css />
-          <JavaScript />
-          <React />
-        </div>
-        <div className="row">
-          <Node />
-          <MySql />
-        </div>
+        <Marquee />
       </div>
       <div className="my-projects">
         <ProjectCard

@@ -1,4 +1,4 @@
-function React() {
+function ReactIcon() {
   return (
     <div className="icon">
       <svg
@@ -27,4 +27,4 @@ function React() {
   );
 }
 
-export default React;
+export default ReactIcon;
