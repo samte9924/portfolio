@@ -50,7 +50,21 @@ function App() {
       </div>
       <div className="contact-me">
         <h1>Contact Me!</h1>
-        <form>Form</form>
+        <form>
+          <div className="form-input">
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div className="form-input">
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div className="form-input">
+            <label htmlFor="">Content</label>
+            <textarea name="content" id="content" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
       <footer>&copy; Samuel Tedaldi 2025</footer>
     </>

@@ -131,3 +131,41 @@ footer {
 .project-card img {
   width: 20rem;
 }
+
+.contact-me {
+  padding: 0 0 3rem 3rem;
+}
+
+.contact-me form {
+  width: 40%;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-input label {
+  font-size: 0.9rem;
+}
+
+.form-input input,
+.form-input textarea {
+  padding: 0.5rem 1rem;
+  font-size: inherit;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(128, 128, 128, 1);
+}
+
+.form-input textarea {
+  resize: none;
+}
+
+.contact-me button {
+  background: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(128, 128, 128, 1);
+  cursor: pointer;
+}
